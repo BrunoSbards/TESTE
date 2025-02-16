@@ -1,0 +1,7 @@
+<h2>Bem Vindo, {{ request.user.leiloeiro.nome }}</h2>
+<h3>Your Attachments:</h3>
+<ul>
+    {% for anexo in anexos %}
+        <li><a href="{{ anexo.arquivo.url }}">{{ anexo.arquivo.name }}</a></li>
+    {% endfor %}
+</ul>
